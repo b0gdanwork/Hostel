@@ -1,0 +1,521 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Hostel "Усадьба"</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- fonts -->
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+<div  id="overflow">
+<!-- mobile menu -->
+<div id="navmobile" class="nav-mobile" style="left: -300px;">
+	<h3>Меню</h3>
+		<li><i class="fas fa-home fa-fw "></i><a href="#boss" onclick="MenuOn(), MenuBlackOff()">Главная</a></li>
+		<li><i class="far fa-images"></i><a href="#" onclick="MenuOn(), MenuBlackOn()">Номера</a></li>
+		<li ><i class="fas fa-ruble-sign fa-fw "></i><a href="#feelhome_nav" onclick="MenuOn(), MenuBlackOff()">Цены</a></li>
+		<li><i class="far fa-comment-alt fa-fw "></i><a href="#comment_nav" onclick="MenuOn(), MenuBlackOff()">Отзывы</a></li>
+		<li><i class="far fa-address-card fa-fw " ></i><a href="#footer" onclick="MenuOn(), MenuBlackOff()">Контакты</a></li>
+	<p>© Hostel "Усадьба"</p>
+</div>
+
+<!-- hello page -->
+
+<header id="boss">
+	<div class="fixed_nav">
+		<!-- menu -->
+		<div class="top-bg" id="top_nav">
+			<div class="top-bg2">
+				<div class="top">
+					<div class="open-mobile-menu" id="menuburger" onclick="MenuOn()">
+						<div id="burger" style="display:block;"><i class="fas fa-bars fa-fw"></i></div>
+						<div id="crest" style="display: none;"><i class="far fa-times fa-fw"></i></div>
+					</div>
+					<nav id="navigation">
+						<li>
+							<a href="#" onclick="MenuBlackOn()">Номера</a>
+						</li>
+						<li>
+							<a href="#feelhome_nav" onclick="MenuBlackOff()">Цены</a>
+						</li>
+						<div class="logo">
+							<a href="#boss" onclick="MenuBlackOff(),MenuOff()"><img src="img/Без-имени-2.png" alt="Logo"></a>
+						</div>
+						<li>
+							<a href="#comment_nav" onclick="MenuBlackOff()">Отзывы</a>
+						</li>
+						<li>
+							<a href="#footer" onclick="MenuBlackOff()">Контакты</a>
+						</li>
+						<div class="call_nav">
+							<div class="call-contact">
+								<i class="fas fa-mobile-alt"></i>
+								<p>+79929272799</p>
+							</div>
+							<div class="call-left-string2">
+								<i class="fas fa-envelope"></i>
+								<p>hostelku@ya.ru</p>
+							</div>
+						</div>
+						<div class="weather">
+							<i class="fas fa-cloud"></i><p>+16</p>
+						</div>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- text header -->
+	<div class="header-h1" >
+
+		<h1><span class="hostel">Hostel "Усадьба"</span></h1>
+		<h2>г.Каменск-Уральский</h2>
+		<p>Хостел "Усадьба" является самым дружелюбным местом в городе для проживани. Чистота, забота и удовлетворение - то, что вы получите у нас. Приезжайте, вы-больше, чем гости.</p>
+	</div>
+	<!-- bron window -->
+	<div class="bron">
+		<div class="form">
+				<div class="cell">
+					<p>Ваш телефон</p>
+					<input type="text" placeholder="+7 (900) 123-45-67" class="input_call">
+				</div>
+				<div class="cell">
+					<p>Комната</p>
+					<select name="room">
+						<option>Выберите вид комнаты</option>
+						<option value="2">На 2 койки</option>
+						<option value="4">На 4 койки</option>
+						<option value="4+">Более 4</option>
+					 </select>
+				</div>
+				<div class="cell">
+					<p>Дата заезда<br></p>
+					<input type="date" name="calendar">
+				</div>
+				<div class="cell">
+					<p>Дата выезда<br></p>
+					<input type="date" name="calendar2">
+				</div>
+				<div class="cell">
+					<p>Гостей</p>
+					<input type="text" class="input_visition bgimg">
+				</div>
+				<div class="cell">
+					<button type="submit" value="Отправить" class="button_send1">Забронировать</button>
+				</div>
+		</div>
+
+	</div></header>
+
+<!-- photo -->
+<div class="passage">
+	<div class="passage-center">
+
+		<p>Мы рады, что наша встреча близко.</p>
+		<div class="pasage_photo">
+			<div class="stolb"><img src="img/room6/2old.jpg" alt="photo"></div>
+			<div class="stolb" id="stolb"><hr class="stolb_line"><img src="img/room2/1.jpg" alt="photo"><img src="img/room2/2.jpg" alt="photo"></div>
+		</div>
+		<p>Hostel "Усадьба" -это идеальный хостел в городе Каменск-Уральский. С природой у нашего порога и многих достопримечательностей поблизости. Hostel находится в центре города. Название не случайно. Здание построенно в 1876 и владельцами были богатые купцы. Мы подарим вам частичку истории Каменска-Уральского.</p>
+		<a href="javascript:return false;" class="button_more" onclick="Acordion()">Всё про номера </a>
+	</div>
+	<div class="rooms_hostel_page_center" >
+	<div class="rooms_hostel_page" id="rooms_hostel_page" style="height: 0px;">
+				<div class="room_number">
+					<h3 class="with_bignumber"><span class="big_number">2</span> местная комната</h3>
+					<div class="slider-gelary">
+						<div><img src="img/room2/1.jpg" alt="cook_zona"></div>
+						<div><img src="img/room2/2.jpg" alt="play_zona"></div>
+					</div>
+					<div class="about_room">
+						<h3>Подробнее:</h3>
+						<li> <i class="fad fa-bed-bunk fa-fw"></i> - койко/место</li>
+						<li> <i class="fas fa-archive fa-fw"></i> - личный шкафчик для вещей</li>
+						<li> <i class="fas fa-bath fa-fw"></i> - круглосуточный душ</li>
+						<li> <i class="fad fa-blanket fa-fw"></i> - чистое постельное билье</li>
+						<li><i class="fad fa-microwave fa-fw"></i> - круглосуточная кухня</li>
+						<li><i class="fad fa-router fa-fw"></i>- бесплатный Wi-Fi</li>
+						<li><i class="fas fa-stopwatch fa-fw"></i>  - выезд в 12:00</li>
+						<div class="price_room"><span class="bold">600</span> pуб/сутки</div>
+					</div>
+					<hr class="hr_gellary">
+				</div>
+				<div class="room_number">
+					<h3 class="with_bignumber"><span class="big_number">4</span> местная комната</h3>
+					<div class="slider-gelary">
+						<div><img src="img/room6/1.jpg" alt="cook_zona"></div>
+						<div><img src="img/room6/2.jpg" alt="play_zona"></div>
+					</div>
+					<div class="about_room">
+						<h3>Подробнее:</h3>
+						<li> <i class="fad fa-bed-bunk fa-fw"></i> - койко/место</li>
+						<li> <i class="fas fa-archive fa-fw"></i> - личный шкафчик для вещей</li>
+						<li> <i class="fas fa-bath fa-fw"></i> - круглосуточный душ</li>
+						<li> <i class="fad fa-blanket fa-fw"></i> - чистое постельное билье</li>
+						<li><i class="fad fa-microwave fa-fw"></i> - круглосуточная кухня</li>
+						<li><i class="fad fa-router fa-fw"></i>- бесплатный Wi-Fi</li>
+						<li><i class="fas fa-stopwatch fa-fw"></i>  - выезд в 12:00</li>
+						<div class="price_room"><span class="bold">500</span> pуб/сутки</div>
+					</div>
+					<hr class="hr_gellary">
+				</div>
+				<div class="room_number">
+					<h3 class="with_bignumber"><span class="big_number">6</span> местная комната</h3>
+					<div class="slider-gelary">
+						<div><img src="img/room6/1.jpg" alt="cook_zona"></div>
+						<div><img src="img/room6/2.jpg" alt="play_zona"></div>
+					</div>
+					<div class="about_room">
+						<h3>Подробнее:</h3>
+						<li> <i class="fad fa-bed-bunk fa-fw"></i> - койко/место</li>
+						<li> <i class="fas fa-archive fa-fw"></i> - личный шкафчик для вещей</li>
+						<li> <i class="fas fa-bath fa-fw"></i> - круглосуточный душ</li>
+						<li> <i class="fad fa-blanket fa-fw"></i> - чистое постельное билье</li>
+						<li><i class="fad fa-microwave fa-fw"></i> - круглосуточная кухня</li>
+						<li><i class="fad fa-router fa-fw"></i>- бесплатный Wi-Fi</li>
+						<li><i class="fas fa-stopwatch fa-fw"></i>  - выезд в 12:00</li>
+						<div class="price_room"><span class="bold">500</span> pуб/сутки</div>
+					</div>
+					<hr class="hr_gellary">
+				</div>
+				<div class="room_number">
+					<h3 class="with_bignumber"><span class="big_number">Кухня</span></h3>
+					<div class="slider-gelary">
+						<div><img src="img/room6/1.jpg" alt="cook_zona"></div>
+						<div><img src="img/room6/2.jpg" alt="play_zona"></div>
+					</div>
+					<div class="about_room">
+						<h3>Подробнее:</h3>
+						<li><i class="fad fa-microwave fa-fw"></i> - микроволновка</li>
+						<li><i class="fad fa-refrigerator fa-fw"></i> - холодильник</li>
+						<li><i class="fad fa-coffee-pot fa-fw"></i> - кофемашина</li>
+						<li><i class="fad fa-coffee fa-fw"></i> - бесплатаный чай</li>
+						<li><i class="fad fa-utensils fa-fw"></i> - посуда</li>
+						<div class="price_room"><span class="bold">24/7</span> круглосуточно</div>
+					</div>
+					<hr class="hr_gellary">
+				</div>
+				<div class="room_number">
+					<h3 class="with_bignumber"><span class="big_number">ЧИЛ</span> комната</h3>
+					<div class="slider-gelary">
+						<div><img src="img/room6/1.jpg" alt="cook_zona"></div>
+						<div><img src="img/room6/2.jpg" alt="play_zona"></div>
+					</div>
+					<div class="about_room">
+						<h3>Подробнее:</h3>
+						<li><i class="fad fa-turntable"></i> - музыка</li>
+						<li><i class="fad fa-tv"></i> - TV</li>
+						<li><i class="fad fa-couch"></i> - комфорт</li>
+						<div class="price_room"><span class="bold">24/7</span> круглосуточно</div>
+					</div>
+					<hr class="hr_gellary">
+				</div>
+				<div class="room_number">
+				<h3 class="with_bignumber"><span class="big_number">Душевая</span> комната</h3>
+				<div class="slider-gelary">
+					<div><img src="img/room6/1.jpg" alt="cook_zona"></div>
+					<div><img src="img/room6/2.jpg" alt="play_zona"></div>
+				</div>
+				<div class="about_room">
+					<h3>Подробнее:</h3>
+					<li><i class="fad fa-bath"></i>- x3 душевые комнаты</li>
+					<li><i class="fad fa-blanket"></i> - чистые полотенца</li>
+					<li><i class="far fa-jug"></i> - шампунь</li>
+					<div class="price_room"><span class="bold">24/7</span> круглосуточно</div>
+				</div>
+				<hr class="hr_gellary">
+				</div>
+				</div>
+	</div>
+</div>
+
+
+<!-- gellary -->
+<div id="blackBgPhoto" >
+	<div  class="photomore" style="height: 0px;">
+		<div class="photomore_center">
+		<div class="rooms_hostel">
+			<div class="room_number">
+				<h3 class="with_bignumber"><span class="big_number">2</span> местная комната</h3>
+				<div class="slick-slider-gelary">
+					<div><img src="img/room2/1.jpg" alt="cook_zona"></div>
+					<div><img src="img/room2/2.jpg" alt="play_zona"></div>
+					<div><img src="img/room2/2.jpg" alt="cook_zona"></div>
+				</div>
+				<div class="about_room">
+					<h3>Подробнее:</h3>
+					<li> <i class="fad fa-bed-bunk fa-fw"></i> - койко/место</li>
+					<li> <i class="fas fa-archive fa-fw"></i> - личный шкафчик для вещей</li>
+					<li> <i class="fas fa-bath fa-fw"></i> - круглосуточный душ</li>
+					<li> <i class="fad fa-blanket fa-fw"></i> - чистое постельное билье</li>
+					<li><i class="fad fa-microwave fa-fw"></i> - круглосуточная кухня</li>
+					<li><i class="fad fa-router fa-fw"></i>- бесплатный Wi-Fi</li>
+					<li><i class="fas fa-stopwatch fa-fw"></i>  - выезд в 12:00</li>
+					<div class="price_room"><span class="bold">600</span> pуб/сутки</div>
+				</div>
+				<hr class="hr_gellary">
+			</div>
+			<div class="room_number">
+				<h3 class="with_bignumber"><span class="big_number">4</span> местная комната</h3>
+				<div class="slick-slider-gelary">
+					<div><img src="img/room6/1.jpg" alt="cook_zona"></div>
+					<div><img src="img/room6/2.jpg" alt="play_zona"></div>
+					<div><img src="img/room6/3.jpg" alt="cook_zona"></div>
+					<div><img src="img/room6/4.jpg" alt="cook_zona"></div>
+				</div>
+				<div class="about_room">
+					<h3>Подробнее:</h3>
+					<li> <i class="fad fa-bed-bunk fa-fw"></i> - койко/место</li>
+					<li> <i class="fas fa-archive fa-fw"></i> - личный шкафчик для вещей</li>
+					<li> <i class="fas fa-bath fa-fw"></i> - круглосуточный душ</li>
+					<li> <i class="fad fa-blanket fa-fw"></i> - чистое постельное билье</li>
+					<li><i class="fad fa-microwave fa-fw"></i> - круглосуточная кухня</li>
+					<li><i class="fad fa-router fa-fw"></i>- бесплатный Wi-Fi</li>
+					<li><i class="fas fa-stopwatch fa-fw"></i>  - выезд в 12:00</li>
+					<div class="price_room"><span class="bold">500</span> pуб/сутки</div>
+				</div>
+				<hr class="hr_gellary">
+			</div>
+			<div class="room_number">
+				<h3 class="with_bignumber"><span class="big_number">6</span> местная комната</h3>
+				<div class="slick-slider-gelary">
+					<div><img src="img/room6/1.jpg" alt="cook_zona"></div>
+					<div><img src="img/room6/2.jpg" alt="play_zona"></div>
+					<div><img src="img/room6/3.jpg" alt="cook_zona"></div>
+					<div><img src="img/room6/4.jpg" alt="cook_zona"></div>
+				</div>
+				<div class="about_room">
+					<h3>Подробнее:</h3>
+					<li> <i class="fad fa-bed-bunk fa-fw"></i> - койко/место</li>
+					<li> <i class="fas fa-archive fa-fw"></i> - личный шкафчик для вещей</li>
+					<li> <i class="fas fa-bath fa-fw"></i> - круглосуточный душ</li>
+					<li> <i class="fad fa-blanket fa-fw"></i> - чистое постельное билье</li>
+					<li><i class="fad fa-microwave fa-fw"></i> - круглосуточная кухня</li>
+					<li><i class="fad fa-router fa-fw"></i>- бесплатный Wi-Fi</li>
+					<li><i class="fas fa-stopwatch fa-fw"></i>  - выезд в 12:00</li>
+					<div class="price_room"><span class="bold">500</span> pуб/сутки</div>
+				</div>
+				<hr class="hr_gellary">
+			</div>
+			<div class="room_number">
+				<h3 class="with_bignumber"><span class="big_number">Кухня</span></h3>
+				<div class="slick-slider-gelary">
+					<div><img src="img/room6/1.jpg" alt="cook_zona"></div>
+					<div><img src="img/room6/2.jpg" alt="play_zona"></div>
+					<div><img src="img/room6/3.jpg" alt="cook_zona"></div>
+					<div><img src="img/room6/4.jpg" alt="cook_zona"></div>
+				</div>
+				<div class="about_room">
+					<h3>Подробнее:</h3>
+					<li><i class="fad fa-microwave fa-fw"></i> - микроволновка</li>
+					<li><i class="fad fa-refrigerator fa-fw"></i> - холодильник</li>
+					<li><i class="fad fa-coffee-pot fa-fw"></i> - кофемашина</li>
+					<li><i class="fad fa-coffee fa-fw"></i> - бесплатаный чай</li>
+					<li><i class="fad fa-utensils fa-fw"></i> - посуда</li>
+					<div class="price_room"><span class="bold">24/7</span> круглосуточно</div>
+				</div>
+				<hr class="hr_gellary">
+			</div>
+			<div class="room_number">
+				<h3 class="with_bignumber"><span class="big_number">ЧИЛ</span> комната</h3>
+				<div class="slick-slider-gelary">
+					<div><img src="img/room6/1.jpg" alt="cook_zona"></div>
+					<div><img src="img/room6/2.jpg" alt="play_zona"></div>
+					<div><img src="img/room6/3.jpg" alt="cook_zona"></div>
+					<div><img src="img/room6/4.jpg" alt="cook_zona"></div>
+				</div>
+				<div class="about_room">
+					<h3>Подробнее:</h3>
+					<li><i class="fad fa-turntable"></i> - музыка</li>
+					<li><i class="fad fa-tv"></i> - TV</li>
+					<li><i class="fad fa-couch"></i> - комфорт</li>
+					<div class="price_room"><span class="bold">24/7</span> круглосуточно</div>
+				</div>
+				<hr class="hr_gellary">
+			</div>
+			<div class="room_number">
+			<h3 class="with_bignumber"><span class="big_number">Душевая</span> комната</h3>
+			<div class="slick-slider-gelary">
+				<div><img src="img/room6/1.jpg" alt="cook_zona"></div>
+				<div><img src="img/room6/2.jpg" alt="play_zona"></div>
+				<div><img src="img/room6/3.jpg" alt="cook_zona"></div>
+				<div><img src="img/room6/4.jpg" alt="cook_zona"></div>
+			</div>
+			<div class="about_room">
+				<h3>Подробнее:</h3>
+				<li><i class="fad fa-bath"></i>- x3 душевые комнаты</li>
+				<li><i class="fad fa-blanket"></i> - чистые полотенца</li>
+				<li><i class="far fa-jug"></i> - шампунь</li>
+				<div class="price_room"><span class="bold">24/7</span> круглосуточно</div>
+			</div>
+			<hr class="hr_gellary">
+			</div>
+		</div>
+		</div>
+	</div>
+</div>
+
+
+<!-- price -->
+
+<div class="feelhome" id="feelhome_nav">
+	<p>ЧУВСТВУЙТЕ СЕБЯ, КАК ДОМА <br> от <b>500</b> рублей/сутки</p>
+</div>
+
+<!-- ico -->
+<div class="number">
+	<h2>От нас вы получите:</h2>
+
+	<li><img src="img/9.png" alt="pattern"></li>
+	<div class="number_center">
+		<div class="numberbox">
+			<i class="fad fa-suitcase-rolling"></i>
+			<div class="namberbox_h3"><h3>Хранения вещей</h3></div>
+		</div>
+		<div class="numberbox">
+			<i class="fad fa-bed-empty"></i>
+			<div class="namberbox_h3"><h3>Чистое спальное место</h3></div>
+		</div>
+		<div class="numberbox">
+			<i class="fad fa-router"></i>
+			<div class="namberbox_h3"><h3>Бесплатный Wi-Fi</h3></div>
+		</div>
+		<div class="numberbox">
+			<i class="fad fa-couch"></i>
+			<div class="namberbox_h3"><h3>Зону отдыха</h3></div>
+		</div>
+		<div class="numberbox"><i class="fad fa-bath"></i>
+			<div class="namberbox_h3"><h3>Душ</h3></div>
+		</div>
+	</div>
+</div>
+
+
+<hr id="hr_line">
+
+<!-- comment -->
+<div class="comment" id="comment_nav">
+	<h2>Наши гости говорят
+	<li><img src="img/9.png" alt="pattern"></li></h2>
+		<div class="commentbox">
+			<div class="commentbox_center">
+				<div class="slick-slider">
+					<div class="">
+						<div class="commentbox_text">
+							<p>Отель оочень понравился! Прямо гордость, что у нас в небольших городах есть такие современные, уютные, комфортные места. За чайник, чай и микрокухню спасибо! Отдельно о ресторане. Два раза ужинали, один раз обедали. Вкусно, необычно, красиво подано, современно, мысли пойти куда-то еще поесть даже не было.</p>
+						</div>
+						<div class="commentbox_photo">
+							<i class="fas fa-hiking"></i>
+							<div class="commentbox_textright_photo">
+								<h3>Cавлук Тарас</h3>
+								<p>Турист-Путешественник</p>
+							</div>
+						</div>
+			        </div>
+					<div class="">
+						<div class="commentbox_text">
+							<p>Отель оочень понравился!</p>
+						</div>
+						<div class="commentbox_photo">
+							<i class="fas fa-hiking"></i>
+							<div class="commentbox_textright_photo">
+								<h3>Cавлук Тарас</h3>
+								<p>Турист-Путешественник</p>
+							</div>
+						</div>
+			        </div>
+			        <div class="">
+						<div class="commentbox_text">
+							<p>Отель оочень понравился! Прямо гордость, что у нас в небольших городах есть такие современные, уютные, комфортные места. За чайник, чай и микрокухню спасибо! Отдельно о ресторане. Два раза ужинали, один раз обедали. Вкусно, необычно, красиво подано, современно, мысли пойти куда-то еще поесть даже не было.
+							Отель оочень понравился! Прямо гордость, что у нас в небольших городах есть такие современные, уютные, комфортные места. За чайник, чай и микрокухню спасибо! Отдельно о ресторане. Два раза ужинали, один раз обедали. Вкусно, необычно, красиво подано, современно, мысли пойти куда-то еще поесть даже не было
+						Отель оочень понравился! Прямо гордость, что у нас в небольших городах есть такие современные, уютные, комфортные места. За чайник, чай и микрокухню спасибо! Отдельно о ресторане. Два раза ужинали, один раз обедали. Вкусно, необычно, красиво подано, современно, мысли пойти куда-то еще поесть даже не было
+					</p>
+						</div>
+						<div class="commentbox_photo">
+							<i class="fas fa-hiking"></i>
+							<div class="commentbox_textright_photo">
+								<h3>Cавлук Тарас</h3>
+								<p>Турист-Путешественник</p>
+							</div>
+						</div>
+			        </div>
+			    </div>
+			</div>
+		</div>
+	</div>
+
+
+<!-- commets -->
+<div class="wantreview">
+	<div class="want_review_center">
+			<div class="want_review_center_flex1">
+				<h3>Хочешь оставить отзыв о нашем хостеле?</h3>
+				<p>Конечно! Будем рады услышать ваше мнение.</p>
+			</div>
+			<div class="want_review_center_flex2">
+				<button class="button_wantreview"><a href="#CallWithUs" id="GoCommentA" onclick="GoComment()">ОСТАВИТЬ ОТЗЫВ</a></button>
+		</div>
+	</div>
+</div>
+
+<!-- contact -->
+<footer id="footer">
+	<div class="contactus_center" id="contactus_center">
+		<div class="contactus_center_flex" >
+			<p class="contactus_center_namep" id="CallWithUs">Вы можете связаться с нами</p>
+			<form action="codik.php" id="write_comment">
+				<div class="E-mail">
+					<p>E-mail<span id="star">*</span></p>
+					<input type="email" name="input_E-mail"  placeholder="hostel_usadba@ya.ru" required="Заполните это поле">
+				</div>
+				<div class="name">
+					<p>Ваше имя <span id="star">*</span><br></p>
+					<input type="text" name="namepeople" placeholder="Владимир Владимирович" required="Заполните это поле">
+				</div>
+				<div class="massageforus">
+					<p>Сообщение для нас<span id="star">*</span><br></p>
+					<textarea type="text" name="massageforus" required="Заполните это поле"></textarea>
+				</div>
+				<div class="click_for_massage">
+					<button id="click_for_massage">
+						ОТПРАВИТЬ
+					</button>
+				</div>
+			</form>
+		</div>
+		<div class="map"><p>Наше местоположение:</p>
+			<div id="YMapsID">
+				<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ae9a394fcc010d7f4af6d107f1aaa55e8ca1fc64d32e4784d677ea13e1f5b62ff&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
+			</div>
+		</div>
+		<div class="contact_footer">
+			<p class="contactus_center_namep">Контакты:</p>
+			<p>Адрес: Свердловская область, г. Каменск-Уральский, ул. Ленина 101</p>
+			<p class="fs_telephone_footer">
+				<a href="#"><i class="fab fa-vk"></i></a>
+				<a href="#"><i class="fab fa-instagram"></i></a></p>
+			<p class="fs_telephone_footer">Телефон: <b><a href="tel:8-922-22-79-785">8-922-22-79-785</a></b></p>
+			<p>Почта: <b><a href="mailto:hostelku@ya.ru">hostelku@ya.ru</a></b></p>
+			<a href="#" id="contact_left_margin"></a>
+		</div>
+	</div>
+	<div class="autor">
+		<div class="autor_center">
+			<p>Контакты разработчика сайта: <a href="mailto:savlukbogdantarasobich@ya.ru" onclick="alert('Почта разработчика: savlukbogdantarasobich@ya.ru');"> почта</a></p>
+		</div>
+	</div>
+</footer>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/slick/slick.min.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript" src="fontawesome/js/all.js"></script>
+<script>
+
+</script>
+</body>
+</html>
